@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".CallActivity">
 
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/editText1"
-    android:hint="Enter mobile number"
-    android:inputType="number"
-    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:hint="Enter mobile number"
+        android:inputType="number"
+        />
 
 
     <Button
@@ -22,5 +22,5 @@
         android:id="@+id/btncall"
         android:layout_gravity="center"
         android:text="call"
-               />
+        />
 </LinearLayout>
