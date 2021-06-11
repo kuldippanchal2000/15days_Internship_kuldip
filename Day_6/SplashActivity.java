@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-
 public class SplashActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
     @Override
@@ -19,8 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_splash);
-
-        mediaPlayer=MediaPlayer.create(SplashActivity.this,R.raw.sleep_away);
+        mediaPlayer=MediaPlayer.create(SplashActivity.this,R.raw.music);
         mediaPlayer.start();
         Thread thread=new Thread() {
             public void run() {
@@ -36,7 +34,6 @@ public class SplashActivity extends AppCompatActivity {
         };
         thread.start();
     }
-
     @Override
     protected void onPause() {
         super.onPause();
