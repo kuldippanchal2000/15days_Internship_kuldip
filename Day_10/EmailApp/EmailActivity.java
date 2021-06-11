@@ -1,4 +1,4 @@
-package com.example.emailapp;
+package com.example.callapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,16 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
-EditText etTo,etSubject,etMessage;
-Button btnsend;
+public class EmailActivity extends AppCompatActivity {
+    EditText etTo,etSubject,etMessage;
+    Button btnsend;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_email);
 
-       etTo=(EditText) findViewById(R.id.editText1_email1);
-       etMessage=(EditText)findViewById(R.id.editText3_message);
+        etTo=(EditText) findViewById(R.id.editText1_email1);
+        etMessage=(EditText)findViewById(R.id.editText3_message);
         etSubject=(EditText)findViewById(R.id.editText2_subject);
         btnsend=(Button) findViewById(R.id.btnsend);
         btnsend.setOnClickListener(new View.OnClickListener() {
