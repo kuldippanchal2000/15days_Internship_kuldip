@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ListviewActivity">
+    tools:context=".ListViewActivity">
 
- <ListView
-     android:id="@+id/lvCourse"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content">
+    <ListView
+        android:id="@+id/lvCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
- </ListView>
+    </ListView>
 
 </LinearLayout>
