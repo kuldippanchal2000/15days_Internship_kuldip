@@ -1,4 +1,5 @@
-package com.example.day_7;
+package com.example.view;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,14 +10,14 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-EditText etSearch;
-Button btnGo;
-WebView webView;
+public class WebViewActivity extends AppCompatActivity implements View.OnClickListener {
+    EditText etSearch;
+    Button btnGo;
+    WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_web_view);
         etSearch=(EditText) findViewById(R.id.etSearch);
         btnGo=(Button) findViewById(R.id.btnGo);
         webView=(WebView) findViewById(R.id.webView);
@@ -25,18 +26,16 @@ WebView webView;
 
     @Override
     public void onClick(View v){
-        switch (v.getId()){
-            case R.id.btnGo:
-                String url=etSearch.getText().toString();
+        if (v.getId() == R.id.btnGo) {
+            String url = etSearch.getText().toString();
 
-                webView.getSettings().setJavaScriptEnabled(true);
-                webView.setWebViewClient(new MyWebViewClient());
-                webView.loadUrl(url);
-                break;
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setWebViewClient(new MyWebViewClient());
+            webView.loadUrl(url);
         }
 
     }
-    private class MyWebViewClient extends WebViewClient{
+    private static class MyWebViewClient extends WebViewClient{
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
