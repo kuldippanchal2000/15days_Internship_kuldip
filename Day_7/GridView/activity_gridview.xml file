@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GridviewActivity">
+    tools:context=".GridViewActivity">
 
- <GridView
-     android:id="@+id/gv1"
-    android:numColumns="2"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content">
+    <GridView
+        android:id="@+id/gv1"
+        android:numColumns="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
- </GridView>
+    </GridView>
 
 </LinearLayout>
