@@ -1,4 +1,5 @@
 package com.example.customlistview;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +39,7 @@ public  class MyAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        convertView = layoutInflater.inflate(R.layout.raw_listview, null);
+        convertView = layoutInflater.inflate(R.layout.raw_list, null);
 
         ImageView iv1 = convertView.findViewById(R.id.iv1);
         TextView tv1 = convertView.findViewById(R.id.tv1);
