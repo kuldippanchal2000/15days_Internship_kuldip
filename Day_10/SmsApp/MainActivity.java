@@ -1,4 +1,9 @@
-package com.example.emailapp;
+package com.example.smsapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 SmsManager sms=SmsManager.getDefault();
                 sms.sendTextMessage(no,null,msg,null,null);
                 Toast.makeText(getApplicationContext(),"Message sent successfully",
-                Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_LONG).show();
             }
         });
     }
