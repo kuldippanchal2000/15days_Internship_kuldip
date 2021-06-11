@@ -1,4 +1,4 @@
-package com.example.emailapp;
+package com.example.videoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -25,28 +25,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         videoView1 = findViewById(R.id.videoView1);
- MediaController mediaController=new MediaController(this);
-mediaController.setAnchorView(videoView1);
-Uri uri=Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.file);
-videoView1.setMediaController(mediaController);
-videoView1.setVideoURI(uri);
+        MediaController mediaController=new MediaController(this);
+        mediaController.setAnchorView(videoView1);
+        Uri uri=Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.mymusic);
+        videoView1.setMediaController(mediaController);
+        videoView1.setVideoURI(uri);
 
-videoView1.requestFocus();
-videoView1.start();
+        videoView1.requestFocus();
+        videoView1.start();
 
-videoView1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-    @Override
-    public void onCompletion(MediaPlayer mp) {
-        Toast.makeText(MainActivity.this,"Thank you...",Toast.LENGTH_SHORT).show();
-    }
-});
-videoView1.setOnErrorListener(new MediaPlayer.OnErrorListener() {
-    @Override
-    public boolean onError(MediaPlayer mp, int what, int extra) {
-        Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
-        return false;
-    }
-});
+        videoView1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Toast.makeText(MainActivity.this,"Thank you...",Toast.LENGTH_SHORT).show();
+            }
+        });
+        videoView1.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
     }
 
 }
