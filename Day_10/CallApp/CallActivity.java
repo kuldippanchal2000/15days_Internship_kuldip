@@ -1,4 +1,4 @@
-package com.example.emailapp;
+package com.example.callapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -12,14 +12,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class CallActivity extends AppCompatActivity {
     EditText editText1;
     Button btncall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_call);
         editText1 = findViewById(R.id.editText1);
         btncall = findViewById(R.id.btncall);
         btncall.setOnClickListener(new View.OnClickListener() {
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse("tel"+number));
 
-                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)
-                 != PackageManager.PERMISSION_GRANTED){
+                if (ActivityCompat.checkSelfPermission(CallActivity.this, Manifest.permission.CALL_PHONE)
+                        != PackageManager.PERMISSION_GRANTED){
                     return;
                 }
                 startActivity(intent);
