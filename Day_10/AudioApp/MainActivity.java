@@ -1,5 +1,7 @@
 package com.example.emailapp;
 
+package com.example.audioapp;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -22,13 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    buttonStart=findViewById(R.id.buttonStart);
-    buttonPause=findViewById(R.id.buttonPause);
-    buttonStop=findViewById(R.id.buttonStop);
+        buttonStart=findViewById(R.id.buttonStart);
+        buttonPause=findViewById(R.id.buttonPause);
+        buttonStop=findViewById(R.id.buttonStop);
 
-    mediaPlayer=MediaPlayer.create(MainActivity.this,R.raw.mysong);
+        mediaPlayer=MediaPlayer.create(MainActivity.this,R.raw.music);
 
-    buttonStart.setOnClickListener(this);
+        buttonStart.setOnClickListener(this);
         buttonStop.setOnClickListener(this);
         buttonPause.setOnClickListener(this);
     }
